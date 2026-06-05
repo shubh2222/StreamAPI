@@ -16,13 +16,13 @@ public class FindNthHighestSal {
 
         int n = 3;
 
-        Double nthHighestSalary = employeeList.stream()
-                .map(Employee::getSalary)
-                .distinct()
-                .sorted(Comparator.reverseOrder())
-                .skip(n - 1)
-                .findFirst()
-                .get();
+            Double nthHighestSalary = employeeList.stream()
+                    .map(Employee::getSalary)
+                    .distinct()
+                    .sorted(Comparator.reverseOrder())
+                    .skip(n - 1)
+                    .findFirst()
+                    .orElse(0.0);
 
         System.out.println(n + " Highest Salary: " + nthHighestSalary);
     }

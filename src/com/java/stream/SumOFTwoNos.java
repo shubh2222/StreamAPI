@@ -8,7 +8,7 @@ public class SumOFTwoNos {
         List<Integer> nosList = Arrays.asList(1,2);
 
         int sum = nosList.stream()
-                .reduce(0,(a,b)-> a+b);
+                .reduce(0, Integer::sum);
         System.out.println(sum);
     }
 }

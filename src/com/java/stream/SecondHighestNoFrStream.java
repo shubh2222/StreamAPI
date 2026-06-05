@@ -1,9 +1,7 @@
 package com.java.stream;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 public class SecondHighestNoFrStream {
     static void main() {
@@ -20,7 +18,7 @@ public class SecondHighestNoFrStream {
                 .sorted((a, b) -> b - a)
                 .skip(1)
                 .findFirst()
-                .get();
+                .orElse(0);
         System.out.println("Sec Highest No is: "+secHighNo);
 
     }

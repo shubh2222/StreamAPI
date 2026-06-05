@@ -12,7 +12,7 @@ public class ConversionOfListToMap {
         Map<String, Integer> map = words.stream()
                 .collect(Collectors.toMap(
                         word -> word,
-                        word -> word.length()
+                        String::length
                 ));
 
         System.out.println(map);

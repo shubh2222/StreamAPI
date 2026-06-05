@@ -2,7 +2,6 @@ package com.java.stream;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ListInAscDescOrder {
     static void main() {
@@ -10,7 +9,7 @@ public class ListInAscDescOrder {
 
         List<Integer> ascOrder = nos.stream()
                 .sorted()
-                .collect(Collectors.toList());
+                .toList();
         System.out.println("Asc Order: "+ascOrder);
 
         List<Integer> descOrder = nos.stream()

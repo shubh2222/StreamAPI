@@ -20,7 +20,7 @@ public class HighestSalaryEmp {
                 .sorted(Collections.reverseOrder())
                 .distinct()
                 .findFirst()
-                .get();
+                .orElse(0.0);
 
         System.out.println("Highest Salary is: "+highSal);
 

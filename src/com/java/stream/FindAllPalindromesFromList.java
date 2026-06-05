@@ -11,8 +11,8 @@ public class FindAllPalindromesFromList {
         );
 
         List<String> palindromes = words.stream()
-                .filter(word -> word.equals(
-                        new StringBuilder(word).reverse().toString()))
+                .filter(word -> word.contentEquals(
+                        new StringBuilder(word).reverse()))
                 .collect(Collectors.toList());
 
         System.out.println(palindromes);

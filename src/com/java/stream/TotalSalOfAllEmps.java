@@ -2,7 +2,6 @@ package com.java.stream;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class TotalSalOfAllEmps {
     static void main() {

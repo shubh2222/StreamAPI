@@ -2,10 +2,8 @@ package com.java.stream;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
-public class EmpsSalGretThanAvgSal {
+public class EmpSalGretThanAvgSal {
     static void main() {
         List<Employee> employeeList = Arrays.asList(
                 new Employee(1, "Aditi", 50000, "IT"),
@@ -18,12 +16,12 @@ public class EmpsSalGretThanAvgSal {
         double avgSalary = employeeList.stream()
                 .mapToDouble(Employee::getSalary)
                 .average()
-                .getAsDouble();
+                .orElse(0.0);
 
         List<String> employeeNames = employeeList.stream()
                 .filter(emp -> emp.getSalary() > avgSalary)
                 .map(Employee::getName)
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println("Average Salary: " + avgSalary);
         System.out.println("Employees with salary greater than average: " + employeeNames);

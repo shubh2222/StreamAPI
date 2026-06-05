@@ -3,10 +3,9 @@ package com.java.stream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class GroupEmpsByDept {
+public class GroupEmpByDept {
     static void main() {
         List<Employee> employeeList = Arrays.asList(
                 new Employee(1, "Aditi", 50000, "IT"),
@@ -16,13 +15,10 @@ public class GroupEmpsByDept {
                 new Employee(5, "Priya", 45000, "HR")
         );
 
-        Map<String, List<Employee>> grpEmpsByDept = employeeList.stream()
+        Map<String, List<Employee>> grpEmpByDept = employeeList.stream()
                 .collect(Collectors.groupingBy(
                         Employee::getDept
                 ));
 
-        grpEmpsByDept.forEach((dept, employees) -> {
-            System.out.println(dept + " -> " + employees);
-        });
-    }
+        grpEmpByDept.forEach((dept, employees) -> System.out.println(dept + " -> " + employees));    }
 }

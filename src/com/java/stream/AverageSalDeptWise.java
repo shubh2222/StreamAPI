@@ -29,7 +29,7 @@ public class AverageSalDeptWise {
         double avgSalary = employeeList.stream()
                 .mapToDouble(Employee::getSalary)
                 .average()
-                .getAsDouble();
+                .orElse(0.0);
 
         System.out.println(avgSalaryByDept);
         System.out.println(avgSalary);

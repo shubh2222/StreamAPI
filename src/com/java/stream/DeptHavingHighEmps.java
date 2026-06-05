@@ -1,7 +1,6 @@
 package com.java.stream;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -24,7 +23,7 @@ public class DeptHavingHighEmps {
                 .entrySet()
                 .stream()
                 .max(Map.Entry.comparingByValue())
-                .get();
+                .orElseThrow();
 
         System.out.println("Department: " + result.getKey());
         System.out.println("Employee Count: " + result.getValue());

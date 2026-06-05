@@ -1,7 +1,7 @@
 package com.java.programs;
 
 public class SumOfThreeNos {
-    public static void main(String [] args){
+    static void main() {
         System.out.print("Sum Of Three Nos is : ");
         int n1 = 5;
         int n2 = 6;
